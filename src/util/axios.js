@@ -1,7 +1,7 @@
 // import React,{useContext} from "react"
+// import {Context} from "../components"
 import axios from "axios"
 import {config} from "./"
-// import {Context} from "../components"
 
 export function useAxios(){
 //   let context = useContext(Context)
@@ -10,9 +10,12 @@ export function useAxios(){
     baseURL:config.backendUrl,
     timeout: 10000,
     headers: {
-    //   authorization:context.state.token,
+      authorization:config.apiToken,
       crossDomain: true,
       contentType: 'application/json; charset=utf-8'
+    },
+    params: {
+      api_token: config.apiToken
     }
   });
 

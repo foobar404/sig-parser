@@ -1,7 +1,7 @@
 import React from 'react'
 import {Route,Redirect} from "react-router-dom"
 
-export default function ProtectedRoute({component:Component,path,exact}){
+export function ProtectedRoute({component:Component,path,exact}){
     return (<Route path={path} exact={exact} render={()=>{
       if(localStorage.getItem("token"))
         return <Component />    

@@ -10,9 +10,10 @@ const Style = styled.div`
     ${mix.row("flex-start","stretch")}
     ${mix.m(4,0)}
     ${mix.children([css`
-        ${mix.hw("50%",[3,3])}
+        ${mix.hw("50%",[3,3,"20px"])}
         align-self:center;
     `])}
+    ${mix.stretch()}
 
     input:hover + pre{
         display:none;
@@ -27,6 +28,10 @@ const Style = styled.div`
         border:2px solid ${themeGet("colors.error.main")};
         transform:none;
     }
+
+    border:2px solid #eee;
+    border-radius:5px;
+    background:hsl(0deg 0% 96%);
 
 `
 
